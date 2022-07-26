@@ -20,3 +20,4 @@ describe("When Home renders", () => {
     expect(homeHeading.text()).toEqual("Welcome!")
   })
 })
+
