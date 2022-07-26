@@ -17,7 +17,6 @@ describe("When Home renders", () => {
   it("displays a heading", () => {
     const home = shallow(<Home />)
     const homeHeading = home.find("h3")
-    console.log("HOME", homeHeading.debug());
-    expect(homeHeading.text()).toEqual("This Should Fail")
+    expect(homeHeading.text()).toEqual("Welcome!")
   })
 })
