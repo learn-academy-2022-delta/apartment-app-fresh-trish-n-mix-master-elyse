@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import ApartmentIndex from "./pages/ApartmentIndex";
+import ProtectedApartmentIndex from "./pages/ProtectedApartmentIndex";
 import ApartmentShow from "./pages/ApartmentShow";
 import ApartmentNew from "./pages/ApartmentNew";
 import ApartmentEdit from "./pages/ApartmentEdit";
@@ -57,6 +58,7 @@ class App extends Component {
           <Route path="/apartmentshow" component={ApartmentShow} />
           <Route path="/apartmentnew" component={ApartmentNew} />
           <Route path="/apartmentedit" component={ApartmentEdit} />
+          <Route path="/myapartments" component={ProtectedApartmentIndex} />
           <Route component={NotFound} />
         </Switch>
       </Router>
