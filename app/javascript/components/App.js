@@ -10,6 +10,24 @@ import NotFound from "./pages/NotFound";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      apartments: [],
+    };
+  }
+
+  componentDidMount() {
+    this.apartmentIndex();
+  }
+
+  apartmentIndex = () => {
+    fetch("/apartments")
+      .then((response) => response.json())
+      .then((payload) => this.setState({ apartments: payload }))
+      .catch((errors) => console.log(errors));
+  };
+
   render() {
     const {
       logged_in,
@@ -19,7 +37,6 @@ class App extends Component {
       sign_out_route,
     } = this.props;
 
-    console.log("app.js: ", { ...this.props });
     return (
       <Router>
         <Header {...this.props} />
@@ -31,7 +48,12 @@ class App extends Component {
               <Home sign_in={sign_in_route} sign_up={new_user_route} />
             )}
           />
-          <Route path="/apartmentindex" component={ApartmentIndex} />
+          <Route
+            path="/apartmentindex"
+            render={() => (
+              <ApartmentIndex apartments={this.state.apartments} />
+            )}
+          />
           <Route path="/apartmentshow" component={ApartmentShow} />
           <Route path="/apartmentnew" component={ApartmentNew} />
           <Route path="/apartmentedit" component={ApartmentEdit} />

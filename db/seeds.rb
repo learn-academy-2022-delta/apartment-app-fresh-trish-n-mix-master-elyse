@@ -20,7 +20,9 @@ apartments = [
     bedrooms: 4,
     bathrooms: 2,
     pets: 'fish welcome!',
+    image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&ixid=MnwxMjA3[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
     user_id: user1.id
+
   },
   {
     id: 2,
@@ -33,6 +35,7 @@ apartments = [
     bedrooms: 8,
     bathrooms: 4,
     pets: 'muppets only!',
+    image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&ixid=MnwxMjA3[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
     user_id: user1.id
   },
   {
@@ -46,6 +49,7 @@ apartments = [
     bedrooms: 3,
     bathrooms: 2,
     pets: 'cats and medium sized dogs',
+    image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&ixid=MnwxMjA3[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
     user_id: user2.id
   },
 ]
